@@ -6,6 +6,7 @@
  */
 
 const projectsData = [
+  // Featured — lead with the strongest, most technically substantial work
   {
     id: "multi-tenant-rag-backend",
     title: "Multi-Tenant RAG Backend",
@@ -44,22 +45,22 @@ const projectsData = [
     liveUrl: null
   },
   {
-    id: "fake-review-detection",
-    title: "Fake Review Detection System (Final Year Project)",
+    id: "advanced-rag",
+    title: "Advanced Knowledge & RAG Retrieval Pipeline",
     category: "ai-rag",
-    badge: "RoBERTa + GRU",
+    badge: "Hybrid Search & Rerank",
     featured: true,
     isConfidential: false,
-    description: "Final Year Project: a GRU-augmented RoBERTa classifier for e-commerce fake review detection, fusing the contextual strength of transformer encoders with recurrent temporal modeling to identify inauthentic reviews.",
+    description: "An intelligent Retrieval-Augmented Generation (RAG) system built for accurate document search and question answering. Uses hybrid search combining keyword and semantic matching with neural reranking to deliver grounded, context-aware answers.",
     keyPoints: [
-      "RoBERTa transformer encoder fused with a GRU layer for sequential context modeling",
-      "Reached 93% accuracy on e-commerce review authenticity classification",
-      "Feature engineering & ablation studies to drive incremental accuracy gains"
+      "Hybrid search combining keyword matching and semantic vector search",
+      "Neural reranking to prioritize the most relevant document segments",
+      "Accurate, fact-based answers grounded in source material"
     ],
-    techStack: ["Python", "PyTorch", "RoBERTa", "GRU", "Hugging Face", "Scikit-learn"],
-    image: "assets/images/review-nlp.svg",
-    githubUrl: "https://github.com/Ihsanullah-AI",
-    liveUrl: "https://github.com/Ihsanullah-AI"
+    techStack: ["Python", "FastAPI", "LangChain", "LangGraph", "ChromaDB", "Hugging Face"],
+    image: "assets/images/rag.jpg",
+    githubUrl: "https://github.com/Ihsanullah-AI/Advanced-RAG",
+    liveUrl: "https://github.com/Ihsanullah-AI/Advanced-RAG"
   },
   {
     id: "ai-recruitment",
@@ -80,24 +81,6 @@ const projectsData = [
     liveUrl: "https://github.com/Ihsanullah-AI/AI_Recruitment_Screening_Automation_System"
   },
   {
-    id: "advanced-rag",
-    title: "Advanced Knowledge & RAG Retrieval Pipeline",
-    category: "ai-rag",
-    badge: "Hybrid Search & Rerank",
-    featured: true,
-    isConfidential: false,
-    description: "An intelligent Retrieval-Augmented Generation (RAG) system built for accurate document search and question answering. Uses hybrid search combining keyword and semantic matching with neural reranking to deliver grounded, context-aware answers.",
-    keyPoints: [
-      "Hybrid search combining keyword matching and semantic vector search",
-      "Neural reranking to prioritize the most relevant document segments",
-      "Accurate, fact-based answers grounded in source material"
-    ],
-    techStack: ["Python", "FastAPI", "LangChain", "LangGraph", "ChromaDB", "Hugging Face"],
-    image: "assets/images/rag.jpg",
-    githubUrl: "https://github.com/Ihsanullah-AI/Advanced-RAG",
-    liveUrl: "https://github.com/Ihsanullah-AI/Advanced-RAG"
-  },
-  {
     id: "trading-bot",
     title: "Algorithmic Crypto Trading & Market Intelligence Bot",
     category: "trading",
@@ -114,6 +97,24 @@ const projectsData = [
     image: "assets/images/trading.jpg",
     githubUrl: "https://github.com/Ihsanullah-AI/Trading_Bot",
     liveUrl: "https://github.com/Ihsanullah-AI/Trading_Bot"
+  },
+  {
+    id: "fake-review-detection",
+    title: "Fake Review Detection System (Final Year Project)",
+    category: "ai-rag",
+    badge: "RoBERTa + GRU",
+    featured: true,
+    isConfidential: false,
+    description: "Final Year Project: a GRU-augmented RoBERTa classifier for e-commerce fake review detection, fusing the contextual strength of transformer encoders with recurrent temporal modeling to identify inauthentic reviews.",
+    keyPoints: [
+      "RoBERTa transformer encoder fused with a GRU layer for sequential context modeling",
+      "Reached 93% accuracy on e-commerce review authenticity classification",
+      "Feature engineering & ablation studies to drive incremental accuracy gains"
+    ],
+    techStack: ["Python", "PyTorch", "RoBERTa", "GRU", "Hugging Face", "Scikit-learn"],
+    image: "assets/images/review-nlp.svg",
+    githubUrl: "https://github.com/Ihsanullah-AI",
+    liveUrl: "https://github.com/Ihsanullah-AI"
   },
   {
     id: "local-ai-doc-pipeline",

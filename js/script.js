@@ -12,6 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initCopyButtons();
   initContactForm();
   initRequestDetailsButton();
+  initSkillsToggle();
+  initExperienceBullets();
   initYear();
 });
 
@@ -128,13 +130,32 @@ function renderProjects(filterCategory = 'all') {
       </div>
       <div class="project-body">
         <h3 class="project-title">${project.title}</h3>
-        <p class="project-desc">${project.description}</p>
+        <p class="project-desc is-clamped">${project.description}</p>
         ${confidentialNoticeHtml}
-        ${keyPointsHtml}
+        ${keyPointsHtml ? `<div class="project-details">${keyPointsHtml}</div>` : ''}
+        ${keyPointsHtml ? `
+          <button type="button" class="project-details-toggle" aria-expanded="false">
+            <i class="fa-solid fa-chevron-down"></i> View Full Details
+          </button>
+        ` : ''}
         ${techTagsHtml}
         ${actionsHtml}
       </div>
     `;
+
+    const detailsToggle = card.querySelector('.project-details-toggle');
+    if (detailsToggle) {
+      const detailsBox = card.querySelector('.project-details');
+      const descEl = card.querySelector('.project-desc');
+      detailsToggle.addEventListener('click', () => {
+        const isExpanded = detailsBox.classList.toggle('is-expanded');
+        descEl.classList.toggle('is-clamped', !isExpanded);
+        detailsToggle.setAttribute('aria-expanded', String(isExpanded));
+        detailsToggle.innerHTML = isExpanded
+          ? '<i class="fa-solid fa-chevron-up"></i> Show Less'
+          : '<i class="fa-solid fa-chevron-down"></i> View Full Details';
+      });
+    }
 
     grid.appendChild(card);
 
@@ -323,10 +344,7 @@ function showToast(message, icon = 'info') {
 }
 
 /**
- * 9. Footer Current Year
- */
-/**
- * 8. Request Details Button — scrolls to contact form and pre-fills it
+ * 9. Request Details Button — scrolls to contact form and pre-fills it
  */
 function initRequestDetailsButton() {
   const btn = document.getElementById('request-details-btn');
@@ -348,6 +366,61 @@ function initRequestDetailsButton() {
   });
 }
 
+/**
+ * 10. Skills "View All" Toggle
+ */
+function initSkillsToggle() {
+  const btn = document.getElementById('view-all-skills-btn');
+  const container = document.getElementById('skills-container');
+  if (!btn || !container) return;
+
+  btn.addEventListener('click', () => {
+    const isExpanded = container.classList.toggle('is-expanded');
+    btn.setAttribute('aria-expanded', String(isExpanded));
+    btn.innerHTML = isExpanded
+      ? '<i class="fa-solid fa-chevron-up"></i> Hide Full Skill List'
+      : '<i class="fa-solid fa-chevron-down"></i> View All Skills';
+
+    if (isExpanded) {
+      container.querySelectorAll('.reveal-on-scroll').forEach(el => el.classList.add('is-visible'));
+    }
+  });
+}
+
+/**
+ * 11. Experience "Show More" Bullets — collapses long bullet lists to 3 by default
+ */
+function initExperienceBullets() {
+  const lists = document.querySelectorAll('.timeline-bullets');
+
+  lists.forEach(list => {
+    const items = Array.from(list.children);
+    if (items.length <= 3) return;
+
+    items.slice(3).forEach(item => item.classList.add('bullet-hidden'));
+
+    const toggleBtn = document.createElement('button');
+    toggleBtn.className = 'show-more-bullets-btn';
+    toggleBtn.type = 'button';
+    toggleBtn.innerHTML = `<i class="fa-solid fa-chevron-down"></i> Show ${items.length - 3} More`;
+    toggleBtn.setAttribute('aria-expanded', 'false');
+
+    toggleBtn.addEventListener('click', () => {
+      const isExpanded = list.classList.toggle('bullets-expanded');
+      items.slice(3).forEach(item => item.classList.toggle('bullet-hidden', !isExpanded));
+      toggleBtn.setAttribute('aria-expanded', String(isExpanded));
+      toggleBtn.innerHTML = isExpanded
+        ? '<i class="fa-solid fa-chevron-up"></i> Show Less'
+        : `<i class="fa-solid fa-chevron-down"></i> Show ${items.length - 3} More`;
+    });
+
+    list.insertAdjacentElement('afterend', toggleBtn);
+  });
+}
+
+/**
+ * 12. Footer Current Year
+ */
 function initYear() {
   const yearEl = document.getElementById('current-year');
   if (yearEl) {

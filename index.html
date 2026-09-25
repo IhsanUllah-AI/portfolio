@@ -39,7 +39,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
@@ -51,7 +51,7 @@
   <!-- Ambient Glowing Mesh Canvas Background -->
   <canvas id="neural-canvas"></canvas>
 
-  <!-- Ambient Light Orbs with Purple & Magenta Glow -->
+  <!-- Ambient Light Orbs (single accent-blue glow, layered for depth) -->
   <div class="ambient-glow-orb orb-primary"></div>
   <div class="ambient-glow-orb orb-secondary"></div>
   <div class="ambient-glow-orb orb-tertiary"></div>
@@ -114,9 +114,10 @@
             </div>
 
             <h1 class="hero-title">
-              I am <span class="hero-name">Ihsan Ullah</span><br>
-              <span class="gradient-text">Backend AI Engineer.</span>
+              <span class="hero-name">Ihsan Ullah</span>
             </h1>
+            <p class="hero-role">Backend AI Engineer building <span class="gradient-text">RAG systems</span> and
+              <span class="gradient-text">AI agents</span>.</p>
 
             <p class="hero-subtitle">
               Building intelligent <strong>LLM Applications</strong>, autonomous <strong>AI Agents</strong>,
@@ -124,19 +125,11 @@
             </p>
 
             <div class="hero-cta-group">
-              <a href="assets/cv.pdf" download="Ihsan_Ullah_AI_Engineer_CV.pdf" class="btn btn-primary">
-                <i class="fa-solid fa-download"></i> Download CV
-              </a>
-              <a href="#projects" class="btn btn-secondary">
+              <a href="#projects" class="btn btn-primary">
                 <i class="fa-solid fa-code"></i> View Projects
               </a>
-              <a href="https://github.com/Ihsanullah-AI" target="_blank" rel="noopener noreferrer"
-                class="btn btn-secondary btn-icon" title="GitHub Profile">
-                <i class="fa-brands fa-github"></i>
-              </a>
-              <a href="https://www.linkedin.com/in/im-ihsanullah/" target="_blank" rel="noopener noreferrer"
-                class="btn btn-secondary btn-icon" title="LinkedIn Profile">
-                <i class="fa-brands fa-linkedin-in"></i>
+              <a href="assets/cv.pdf" download="Ihsan_Ullah_AI_Engineer_CV.pdf" class="btn btn-secondary">
+                <i class="fa-solid fa-download"></i> Download CV
               </a>
             </div>
 
@@ -253,7 +246,28 @@
             computer vision, speech & audio processing, data engineering, and cloud/DevOps deployment.</p>
         </div>
 
-        <div class="skills-container">
+        <!-- Top Skills Summary -->
+        <div class="top-skills-row reveal-on-scroll">
+          <span class="top-skill-tag"><i class="fa-brands fa-python"></i> Python</span>
+          <span class="top-skill-tag"><i class="fa-solid fa-fire"></i> PyTorch</span>
+          <span class="top-skill-tag"><i class="fa-solid fa-link"></i> LangChain</span>
+          <span class="top-skill-tag"><i class="fa-solid fa-bolt-lightning"></i> FastAPI</span>
+          <span class="top-skill-tag"><i class="fa-brands fa-docker"></i> Docker</span>
+          <span class="top-skill-tag"><i class="fa-brands fa-google"></i> GCP</span>
+          <span class="top-skill-tag"><i class="fa-solid fa-circle-nodes"></i> Neo4j</span>
+          <span class="top-skill-tag"><i class="fa-solid fa-database"></i> PostgreSQL</span>
+          <span class="top-skill-tag"><i class="fa-solid fa-bolt"></i> Hugging Face</span>
+          <span class="top-skill-tag"><i class="fa-solid fa-magnifying-glass"></i> RAG</span>
+        </div>
+
+        <div class="view-all-skills-wrap reveal-on-scroll">
+          <button class="view-all-skills-btn" id="view-all-skills-btn" aria-expanded="false"
+            aria-controls="skills-container">
+            <i class="fa-solid fa-chevron-down"></i> View All Skills
+          </button>
+        </div>
+
+        <div class="skills-container" id="skills-container">
 
           <!-- Category: Machine Learning & Deep Learning (Languages folded in) -->
           <div class="glass-card skill-category-card reveal-on-scroll">

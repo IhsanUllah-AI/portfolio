@@ -22,8 +22,12 @@ class NeuralBackground {
   init() {
     this.resize();
     this.particles = [];
-    const count = Math.min(Math.floor((this.width * this.height) / 20000), 80);
-    this.numberOfParticles = Math.max(count, 30);
+    const isSmallScreen = this.width < 768;
+    const divisor = isSmallScreen ? 35000 : 20000;
+    const cap = isSmallScreen ? 30 : 80;
+    const floor = isSmallScreen ? 14 : 30;
+    const count = Math.min(Math.floor((this.width * this.height) / divisor), cap);
+    this.numberOfParticles = Math.max(count, floor);
 
     for (let i = 0; i < this.numberOfParticles; i++) {
       this.particles.push(new Particle(this.width, this.height));
@@ -74,6 +78,11 @@ class NeuralBackground {
   }
 
   animate() {
+    if (document.hidden) {
+      this.animationFrameId = requestAnimationFrame(() => this.animate());
+      return;
+    }
+
     this.ctx.clearRect(0, 0, this.width, this.height);
 
     for (let i = 0; i < this.particles.length; i++) {
@@ -146,5 +155,8 @@ class Particle {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  new NeuralBackground('neural-canvas');
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!prefersReducedMotion) {
+    new NeuralBackground('neural-canvas');
+  }
 });
