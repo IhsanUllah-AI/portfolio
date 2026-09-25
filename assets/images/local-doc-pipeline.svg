@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bgGrad5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1220"/>
+      <stop offset="55%" stop-color="#0c2b45"/>
+      <stop offset="100%" stop-color="#123a5e"/>
+    </linearGradient>
+    <radialGradient id="glow5" cx="50%" cy="20%" r="70%">
+      <stop offset="0%" stop-color="#57a2d5" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#57a2d5" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="serverGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#57a2d5"/>
+      <stop offset="100%" stop-color="#0c446b"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#bgGrad5)"/>
+  <rect width="800" height="450" fill="url(#glow5)"/>
+
+  <!-- Air-gap boundary -->
+  <rect x="120" y="90" width="560" height="270" rx="20" fill="none" stroke="#57a2d5" stroke-width="2" stroke-dasharray="8 8" opacity="0.5"/>
+  <text x="400" y="80" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="12" fill="#8fb8de" letter-spacing="2">AIR-GAPPED LOCAL INFRASTRUCTURE</text>
+
+  <!-- Documents stack -->
+  <g transform="translate(230,220)">
+    <rect x="-15" y="-70" width="90" height="110" rx="6" fill="#0e2337" stroke="#57a2d5" stroke-width="1.5"/>
+    <rect x="-5" y="-80" width="90" height="110" rx="6" fill="#123252" stroke="#57a2d5" stroke-width="1.5"/>
+    <rect x="5" y="-90" width="90" height="110" rx="6" fill="#164067" stroke="#8fd1ff" stroke-width="1.5"/>
+    <line x1="20" y1="-70" x2="80" y2="-70" stroke="#8fd1ff" stroke-width="2" opacity="0.6"/>
+    <line x1="20" y1="-55" x2="70" y2="-55" stroke="#8fd1ff" stroke-width="2" opacity="0.45"/>
+    <line x1="20" y1="-40" x2="80" y2="-40" stroke="#8fd1ff" stroke-width="2" opacity="0.3"/>
+  </g>
+
+  <!-- Local server rack -->
+  <g transform="translate(400,235)">
+    <rect x="-70" y="-90" width="140" height="180" rx="10" fill="url(#serverGrad)" opacity="0.85"/>
+    <rect x="-55" y="-72" width="110" height="20" rx="4" fill="#0c1b2b" opacity="0.8"/>
+    <rect x="-55" y="-42" width="110" height="20" rx="4" fill="#0c1b2b" opacity="0.8"/>
+    <rect x="-55" y="-12" width="110" height="20" rx="4" fill="#0c1b2b" opacity="0.8"/>
+    <circle cx="-40" cy="-62" r="4" fill="#57e08f"/>
+    <circle cx="-40" cy="-32" r="4" fill="#57e08f"/>
+    <circle cx="-40" cy="-2" r="4" fill="#ffd166"/>
+  </g>
+
+  <!-- Lock icon (privacy) -->
+  <g transform="translate(400,235)">
+    <rect x="-16" y="34" width="32" height="26" rx="4" fill="#0c1b2b" stroke="#8fd1ff" stroke-width="2"/>
+    <path d="M -10 34 L -10 22 Q -10 8 0 8 Q 10 8 10 22 L 10 34" fill="none" stroke="#8fd1ff" stroke-width="2.5"/>
+  </g>
+
+  <!-- Chat / QA output -->
+  <g transform="translate(580,220)">
+    <rect x="-70" y="-45" width="140" height="90" rx="14" fill="#0c1b2b" stroke="#57a2d5" stroke-width="2"/>
+    <line x1="-45" y1="-15" x2="45" y2="-15" stroke="#8fd1ff" stroke-width="2" opacity="0.7"/>
+    <line x1="-45" y1="0" x2="30" y2="0" stroke="#8fd1ff" stroke-width="2" opacity="0.5"/>
+    <line x1="-45" y1="15" x2="45" y2="15" stroke="#8fd1ff" stroke-width="2" opacity="0.35"/>
+  </g>
+
+  <path d="M 310 220 L 340 220" stroke="#57a2d5" stroke-width="2.5" opacity="0.7"/>
+  <path d="M 460 220 L 500 220" stroke="#57a2d5" stroke-width="2.5" opacity="0.7"/>
+
+  <text x="400" y="50" text-anchor="middle" font-family="Outfit, sans-serif" font-weight="700"
+        font-size="24" fill="#eaf4ff" letter-spacing="0.4">
+    Local AI Document Pipeline
+  </text>
+  <text x="400" y="405" text-anchor="middle" font-family="JetBrains Mono, monospace" font-weight="500"
+        font-size="13" fill="#8fb8de" letter-spacing="1">
+    OLLAMA · CHROMADB · OFFLINE PRIVACY-FIRST QA
+  </text>
+</svg>

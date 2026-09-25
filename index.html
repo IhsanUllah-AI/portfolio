@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#000711">
+  <meta name="color-scheme" content="dark">
+
+  <!-- Primary Meta Tags -->
+  <title>Ihsan Ullah | Backend AI Engineer</title>
+  <meta name="title" content="Ihsan Ullah | Backend AI Engineer">
+  <meta name="description"
+    content="Portfolio of Ihsan Ullah — AI Engineer specializing in LLM Applications, AI Agents, Knowledge Retrieval Systems, and Intelligent Automation.">
+  <meta name="keywords"
+    content="Ihsan Ullah, AI Engineer, LLM Applications, AI Agents, Autonomous Systems, RAG, LangChain, LangGraph, Python, FastAPI, Computer Vision, Portfolio">
+  <meta name="author" content="Ihsan Ullah">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://github.com/Ihsanullah-AI">
+  <meta property="og:title" content="Ihsan Ullah | Backend AI Engineer">
+  <meta property="og:description"
+    content="Portfolio of Ihsan Ullah — AI Engineer specializing in LLM Applications, AI Agents, Knowledge Retrieval Systems, and Intelligent Automation.">
+  <meta property="og:image" content="assets/images/avatar.jpg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="Ihsan Ullah | Backend AI Engineer">
+  <meta property="twitter:description"
+    content="Portfolio of Ihsan Ullah — AI Engineer specializing in LLM Applications, AI Agents, Knowledge Retrieval Systems, and Intelligent Automation.">
+  <meta property="twitter:image" content="assets/images/avatar.jpg">
+
+  <!-- Favicon Icon with Calcite Signature #0c446b / #57a2d5 Gradient -->
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><defs><linearGradient id=%22g%22 x1=%220%25%22 y1=%220%25%22 x2=%22100%25%22 y2=%22100%25%22><stop offset=%220%25%22 stop-color=%22%230c446b%22/><stop offset=%22100%25%22 stop-color=%22%2357a2d5%22/></linearGradient></defs><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22url(%23g)%22/><text y=%2268%22 x=%2250%22 text-anchor=%22middle%22 font-family=%22sans-serif%22 font-weight=%22800%22 font-size=%2246%22 fill=%22white%22>IU</text></svg>">
+
+  <!-- Stylesheets & Fonts (Calcite Outfit Font) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+
+<body>
+
+  <!-- Ambient Glowing Mesh Canvas Background -->
+  <canvas id="neural-canvas"></canvas>
+
+  <!-- Ambient Light Orbs with Purple & Magenta Glow -->
+  <div class="ambient-glow-orb orb-primary"></div>
+  <div class="ambient-glow-orb orb-secondary"></div>
+  <div class="ambient-glow-orb orb-tertiary"></div>
+
+  <!-- Header / Navigation Bar -->
+  <header class="header" id="header">
+    <div class="container nav-container">
+      <a href="#hero" class="logo" aria-label="Ihsan Ullah Home">
+        <div class="logo-badge">IU</div>
+        <div class="logo-text">Ihsan<span>.AI</span></div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <ul class="nav-links">
+        <li><a href="#hero" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <!-- Action Buttons -->
+      <div class="nav-actions">
+        <a href="#contact" class="btn btn-primary btn-sm">
+          <i class="fa-solid fa-paper-plane"></i> Let's Talk
+        </a>
+        <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Toggle Menu" aria-expanded="false"
+          aria-controls="mobile-nav">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav" id="mobile-nav">
+      <a href="#hero" class="nav-link mobile-link">Home</a>
+      <a href="#about" class="nav-link mobile-link">About</a>
+      <a href="#skills" class="nav-link mobile-link">Skills</a>
+      <a href="#projects" class="nav-link mobile-link">Projects</a>
+      <a href="#experience" class="nav-link mobile-link">Experience</a>
+      <a href="#contact" class="nav-link mobile-link">Contact</a>
+      <a href="#contact" class="btn btn-primary">
+        <i class="fa-solid fa-paper-plane"></i> Let's Talk
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="section hero-section" id="hero">
+      <div class="container">
+        <div class="hero-grid">
+
+          <!-- Left: Hero Introduction -->
+          <div class="hero-content reveal-on-scroll">
+            <div class="status-badge">
+              <span class="status-dot"></span>
+              Available for Projects & AI Consulting
+            </div>
+
+            <h1 class="hero-title">
+              I am <span class="hero-name">Ihsan Ullah</span><br>
+              <span class="gradient-text">Backend AI Engineer.</span>
+            </h1>
+
+            <p class="hero-subtitle">
+              Building intelligent <strong>LLM Applications</strong>, autonomous <strong>AI Agents</strong>,
+              advanced <strong>Knowledge Retrieval (RAG)</strong> systems, and scalable automation pipelines.
+            </p>
+
+            <div class="hero-cta-group">
+              <a href="assets/cv.pdf" download="Ihsan_Ullah_AI_Engineer_CV.pdf" class="btn btn-primary">
+                <i class="fa-solid fa-download"></i> Download CV
+              </a>
+              <a href="#projects" class="btn btn-secondary">
+                <i class="fa-solid fa-code"></i> View Projects
+              </a>
+              <a href="https://github.com/Ihsanullah-AI" target="_blank" rel="noopener noreferrer"
+                class="btn btn-secondary btn-icon" title="GitHub Profile">
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/im-ihsanullah/" target="_blank" rel="noopener noreferrer"
+                class="btn btn-secondary btn-icon" title="LinkedIn Profile">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+            </div>
+
+          </div>
+
+          <!-- Right: Hero Portrait Visual (Clean card frame, no floating badges) -->
+          <div class="hero-visual reveal-on-scroll delay-200">
+            <div class="portrait-card">
+              <div class="portrait-glow"></div>
+              <div class="portrait-wrapper">
+                <img src="assets/images/avatar.jpg" alt="Ihsan Ullah - AI Engineer" class="portrait-img">
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <div class="section-tag"><i class="fa-solid fa-user-astronaut"></i> Background</div>
+          <h2 class="section-title">Bridging Applied AI with <span class="gradient-text">Modern Engineering</span></h2>
+          <p class="section-subtitle">An AI engineer with a solid Computer Science foundation and
+            hands-on experience developing scalable, intelligent applications.</p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Left: Bio & Quick Details -->
+          <div class="glass-card about-card reveal-on-scroll">
+            <h3 class="about-bio-title">Hello! I'm Ihsan Ullah</h3>
+            <p class="about-bio-text">
+              I am an <strong>AI Engineer</strong> dedicated to building intelligent, scalable systems that turn complex
+              data into high-impact solutions. With a BS in Computer Science from <strong>University of Peshawar</strong>
+              and Machine Learning & Deep Learning Specializations from <strong>DeepLearning.AI (Coursera)</strong>,
+              I combine deep theoretical foundations with practical
+              engineering expertise.
+            </p>
+            <p class="about-bio-text">
+              My core work includes developing <strong>AI Agents & Knowledge Retrieval (RAG)</strong> systems
+              (LangChain/LangGraph), fine-tuning transformer models, and deploying high-performance
+              <strong>FastAPI</strong> services—delivering production AI across Unity-integrated character
+              generation, Graph RAG cryptocurrency intelligence, computer vision, and audio processing workflows.
+            </p>
+            <div class="about-bio-highlight">
+              <i class="fa-solid fa-quote-left"></i> "Dedicated to engineering reliable, low-latency AI
+              solutions and autonomous workflows that create real-world value."
+            </div>
+
+            <div class="contact-quick-list">
+              <div class="quick-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Bahria Town Phase 7, Islamabad</span>
+              </div>
+              <div class="quick-item">
+                <i class="fa-solid fa-envelope"></i>
+                <a href="mailto:ihsaanullah642@gmail.com">ihsaanullah642@gmail.com</a>
+              </div>
+              <div class="quick-item">
+                <i class="fa-solid fa-phone"></i>
+                <a href="tel:+923400552325">+92 3400552325</a>
+              </div>
+              <div class="quick-item">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <span>BS Computer Science </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Core Specialization Pillars -->
+          <div class="pillars-grid reveal-on-scroll delay-200">
+            <div class="glass-card pillar-item">
+              <div class="pillar-icon">
+                <i class="fa-solid fa-diagram-project"></i>
+              </div>
+              <div class="pillar-info">
+                <h4>Knowledge Retrieval & Vector Search</h4>
+                <p>Strong understanding of Knowledge Graphs, paired with designing intelligent retrieval pipelines,
+                  hybrid vector search, semantic reranking, and contextual synthesis.</p>
+              </div>
+            </div>
+
+            <div class="glass-card pillar-item">
+              <div class="pillar-icon">
+                <i class="fa-solid fa-robot"></i>
+              </div>
+              <div class="pillar-info">
+                <h4>Multi-Agent Systems & NLP</h4>
+                <p>Building autonomous task orchestration with LangChain, LangGraph, and n8n, alongside fine-tuned
+                  transformer models.</p>
+              </div>
+            </div>
+
+            <div class="glass-card pillar-item">
+              <div class="pillar-icon">
+                <i class="fa-solid fa-arrow-trend-up"></i>
+              </div>
+              <div class="pillar-info">
+                <h4>Market Intelligence & Computer Vision</h4>
+                <p>Developing quantitative data pipelines, real-time market signals, and computer vision classification
+                  models.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Matrix Section -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <div class="section-tag"><i class="fa-solid fa-microchip"></i> Tech Stack</div>
+          <h2 class="section-title">Skills & <span class="gradient-text">Core Competencies</span></h2>
+          <p class="section-subtitle">A comprehensive toolkit spanning machine learning, LLM & NLP engineering,
+            computer vision, speech & audio processing, data engineering, and cloud/DevOps deployment.</p>
+        </div>
+
+        <div class="skills-container">
+
+          <!-- Category: Machine Learning & Deep Learning (Languages folded in) -->
+          <div class="glass-card skill-category-card reveal-on-scroll">
+            <div class="skill-cat-header">
+              <div class="skill-cat-icon"><i class="fa-solid fa-brain"></i></div>
+              <h3 class="skill-cat-title">Machine Learning & Deep Learning</h3>
+            </div>
+            <div class="skills-pill-wrap">
+              <span class="skill-tag"><i class="fa-brands fa-python"></i> Python</span>
+              <span class="skill-tag"><i class="fa-solid fa-code"></i> C++</span>
+              <span class="skill-tag"><i class="fa-brands fa-python"></i> PyTorch</span>
+              <span class="skill-tag"><i class="fa-solid fa-tensor"></i> TensorFlow</span>
+              <span class="skill-tag"><i class="fa-solid fa-layer-group"></i> Keras</span>
+              <span class="skill-tag"><i class="fa-solid fa-chart-line"></i> Scikit-learn</span>
+              <span class="skill-tag"><i class="fa-solid fa-microchip"></i> CUDA</span>
+              <span class="skill-tag"><i class="fa-solid fa-network-wired"></i> CNNs</span>
+              <span class="skill-tag"><i class="fa-solid fa-diagram-project"></i> RNNs (LSTM, GRU)</span>
+              <span class="skill-tag"><i class="fa-solid fa-cubes-stacked"></i> Transformers</span>
+              <span class="skill-tag"><i class="fa-solid fa-robot"></i> RL (PPO)</span>
+              <span class="skill-tag"><i class="fa-solid fa-arrows-rotate"></i> Transfer Learning</span>
+              <span class="skill-tag"><i class="fa-solid fa-sliders"></i> Hyperparameter Tuning</span>
+            </div>
+          </div>
+
+          <!-- Category: LLM & Frameworks -->
+          <div class="glass-card skill-category-card reveal-on-scroll delay-100">
+            <div class="skill-cat-header">
+              <div class="skill-cat-icon"><i class="fa-solid fa-comments"></i></div>
+              <h3 class="skill-cat-title">LLM & Frameworks</h3>
+            </div>
+            <div class="skills-pill-wrap">
+              <span class="skill-tag"><i class="fa-solid fa-bolt"></i> Hugging Face</span>
+              <span class="skill-tag"><i class="fa-solid fa-link"></i> LangChain</span>
+              <span class="skill-tag"><i class="fa-solid fa-magnifying-glass"></i> RAG</span>
+              <span class="skill-tag"><i class="fa-solid fa-circle-nodes"></i> Graph RAG</span>
+              <span class="skill-tag"><i class="fa-solid fa-box-archive"></i> ChromaDB</span>
+              <span class="skill-tag"><i class="fa-solid fa-eye"></i> GPT-4 Vision</span>
+              <span class="skill-tag"><i class="fa-solid fa-eye"></i> Claude Vision</span>
+              <span class="skill-tag"><i class="fa-solid fa-gauge-high"></i> vLLM</span>
+              <span class="skill-tag"><i class="fa-solid fa-terminal"></i> llama.cpp</span>
+            </div>
+          </div>
+
+          <!-- Category: NLP & Fine-tuning -->
+          <div class="glass-card skill-category-card reveal-on-scroll delay-200">
+            <div class="skill-cat-header">
+              <div class="skill-cat-icon"><i class="fa-solid fa-font"></i></div>
+              <h3 class="skill-cat-title">NLP & Fine-tuning</h3>
+            </div>
+            <div class="skills-pill-wrap">
+              <span class="skill-tag"><i class="fa-solid fa-layer-group"></i> BERT</span>
+              <span class="skill-tag"><i class="fa-solid fa-layer-group"></i> RoBERTa</span>
+              <span class="skill-tag"><i class="fa-solid fa-wand-magic-sparkles"></i> LoRA / QLoRA</span>
+              <span class="skill-tag"><i class="fa-solid fa-font"></i> NLTK</span>
+              <span class="skill-tag"><i class="fa-solid fa-tags"></i> SpaCy</span>
+              <span class="skill-tag"><i class="fa-solid fa-vector-square"></i> Word2Vec</span>
+              <span class="skill-tag"><i class="fa-solid fa-table"></i> TF-IDF</span>
+              <span class="skill-tag"><i class="fa-solid fa-pen-nib"></i> Prompt Engineering</span>
+            </div>
+          </div>
+
+          <!-- Category: Computer Vision & Audio Intelligence -->
+          <div class="glass-card skill-category-card reveal-on-scroll delay-300">
+            <div class="skill-cat-header">
+              <div class="skill-cat-icon"><i class="fa-solid fa-camera"></i></div>
+              <h3 class="skill-cat-title">Computer Vision & Audio Intelligence</h3>
+            </div>
+            <div class="skills-pill-wrap">
+              <span class="skill-tag"><i class="fa-solid fa-camera"></i> OpenCV</span>
+              <span class="skill-tag"><i class="fa-solid fa-network-wired"></i> CNN Classifiers</span>
+              <span class="skill-tag"><i class="fa-solid fa-crosshairs"></i> YOLO Detection</span>
+              <span class="skill-tag"><i class="fa-solid fa-font"></i> OCR (Tesseract/EasyOCR)</span>
+              <span class="skill-tag"><i class="fa-solid fa-image"></i> Image Augmentation</span>
+              <span class="skill-tag"><i class="fa-solid fa-shapes"></i> Synthetic Imagery</span>
+              <span class="skill-tag"><i class="fa-solid fa-waveform"></i> OpenAI Whisper</span>
+              <span class="skill-tag"><i class="fa-solid fa-chart-simple"></i> Librosa</span>
+              <span class="skill-tag"><i class="fa-solid fa-wave-square"></i> Mel-Spectrograms</span>
+              <span class="skill-tag"><i class="fa-solid fa-fingerprint"></i> Voice Fingerprinting</span>
+              <span class="skill-tag"><i class="fa-solid fa-scissors"></i> Audio Augmentation</span>
+            </div>
+          </div>
+
+          <!-- Category: Data Engineering & Visualisation -->
+          <div class="glass-card skill-category-card reveal-on-scroll delay-400">
+            <div class="skill-cat-header">
+              <div class="skill-cat-icon"><i class="fa-solid fa-database"></i></div>
+              <h3 class="skill-cat-title">Data Engineering & Visualisation</h3>
+            </div>
+            <div class="skills-pill-wrap">
+              <span class="skill-tag"><i class="fa-solid fa-calculator"></i> NumPy</span>
+              <span class="skill-tag"><i class="fa-solid fa-table-columns"></i> Pandas</span>
+              <span class="skill-tag"><i class="fa-solid fa-circle-nodes"></i> Neo4j GraphDB</span>
+              <span class="skill-tag"><i class="fa-solid fa-database"></i> PostgreSQL</span>
+              <span class="skill-tag"><i class="fa-solid fa-table"></i> SQL</span>
+              <span class="skill-tag"><i class="fa-solid fa-gears"></i> Feature Engineering</span>
+              <span class="skill-tag"><i class="fa-solid fa-broom"></i> Data Preprocessing</span>
+              <span class="skill-tag"><i class="fa-solid fa-chart-line"></i> Matplotlib</span>
+              <span class="skill-tag"><i class="fa-solid fa-chart-column"></i> Seaborn</span>
+              <span class="skill-tag"><i class="fa-solid fa-chart-simple"></i> Plotly</span>
+              <span class="skill-tag"><i class="fa-solid fa-display"></i> Streamlit</span>
+            </div>
+          </div>
+
+          <!-- Category: Cloud, DevOps & Deployment -->
+          <div class="glass-card skill-category-card reveal-on-scroll delay-500">
+            <div class="skill-cat-header">
+              <div class="skill-cat-icon"><i class="fa-solid fa-cloud-arrow-up"></i></div>
+              <h3 class="skill-cat-title">Cloud, DevOps & Deployment</h3>
+            </div>
+            <div class="skills-pill-wrap">
+              <span class="skill-tag"><i class="fa-brands fa-google"></i> GCP Compute Engine</span>
+              <span class="skill-tag"><i class="fa-brands fa-google"></i> GCP Cloud Storage</span>
+              <span class="skill-tag"><i class="fa-brands fa-google"></i> GCP Secret Manager</span>
+              <span class="skill-tag"><i class="fa-brands fa-docker"></i> Docker</span>
+              <span class="skill-tag"><i class="fa-solid fa-dharmachakra"></i> Kubernetes</span>
+              <span class="skill-tag"><i class="fa-solid fa-flask-vial"></i> MLflow</span>
+              <span class="skill-tag"><i class="fa-solid fa-bolt-lightning"></i> FastAPI</span>
+              <span class="skill-tag"><i class="fa-solid fa-shield-halved"></i> Pydantic</span>
+              <span class="skill-tag"><i class="fa-solid fa-sliders"></i> Optuna</span>
+              <span class="skill-tag"><i class="fa-solid fa-diagram-project"></i> MLOps Pipelines</span>
+              <span class="skill-tag"><i class="fa-solid fa-microchip"></i> GPU Scheduling</span>
+              <span class="skill-tag"><i class="fa-brands fa-linux"></i> Linux</span>
+              <span class="skill-tag"><i class="fa-brands fa-git-alt"></i> Git</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <div class="section-tag"><i class="fa-solid fa-code"></i> Showcase</div>
+          <h2 class="section-title">Featured <span class="gradient-text">AI & ML Projects</span></h2>
+          <p class="section-subtitle">Practical applications, open-source repositories, and autonomous systems.</p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="projects-filter-bar reveal-on-scroll">
+          <button class="filter-btn active" data-filter="all">All Projects</button>
+          <button class="filter-btn" data-filter="ai-rag">AI & RAG</button>
+          <button class="filter-btn" data-filter="agents">Agents & Automation</button>
+          <button class="filter-btn" data-filter="trading">Trading & FinTech</button>
+          <button class="filter-btn" data-filter="vision">Computer Vision</button>
+        </div>
+
+        <!-- Dynamic Projects Grid (Rendered from projects.js) -->
+        <div class="projects-grid" id="projects-grid">
+          <!-- Dynamically populated by js/script.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience & Education Timeline -->
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <div class="section-tag"><i class="fa-solid fa-briefcase"></i> Track Record</div>
+          <h2 class="section-title">Experience & <span class="gradient-text">Education</span></h2>
+          <p class="section-subtitle">A history of delivering AI solutions across dynamic environments.</p>
+        </div>
+
+        <div class="timeline-grid">
+
+          <!-- Experience Column -->
+          <div class="reveal-on-scroll">
+            <h3 class="timeline-column-title">
+              <i class="fa-solid fa-briefcase"></i> Work Experience
+            </h3>
+
+            <div class="timeline-track">
+              <!-- Synapsify -->
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="glass-card timeline-card">
+                  <div class="timeline-meta">
+                    <div>
+                      <h4 class="timeline-role">Associate AI Engineer</h4>
+                      <span class="timeline-company">Synapsify</span>
+                    </div>
+                    <span class="timeline-date">May 2026 – Present</span>
+                  </div>
+                  <ul class="timeline-bullets">
+                    <li>Backend AI Engineer on a Unity-integrated AI character creator tool — building core backend
+                      endpoints and Retrieval-Augmented Generation (RAG) endpoints that use prompt engineering and
+                      blendshape descriptions to generate characters from a verified dataset of 1,000+ profiles.</li>
+                    <li>Built the RAG pipeline for character data — chunking, dense embedding generation, and vector
+                      storage in ChromaDB — to power retrieval-augmented character generation.</li>
+                    <li>Developed backend endpoints for character save, load, and export operations, backed by
+                      PostgreSQL and deployed on GCP Compute Engine instances.</li>
+                    <li>Containerised all backend and RAG services with Docker; used GCP Secret Manager to provision
+                      and inject API keys and database credentials into production containers at runtime.</li>
+                    <li>Contributed to a parallel AgriTech initiative — generating synthetic crop imagery to train
+                      object detection models, using GCP Cloud Storage for image and model storage/export.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- ByteBoom -->
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="glass-card timeline-card">
+                  <div class="timeline-meta">
+                    <div>
+                      <h4 class="timeline-role">AI Engineer</h4>
+                      <span class="timeline-company">ByteBoom</span>
+                    </div>
+                    <span class="timeline-date">Aug 2025 – Apr 2026</span>
+                  </div>
+                  <ul class="timeline-bullets">
+                    <li>Architected a Graph RAG cryptocurrency intelligence system on a Neo4j knowledge graph with
+                      32+ typed nodes; built ingestion adapters mapping live market API data into structured graph
+                      entities (liquidation zones, whale flows, TA signals, fund flows).</li>
+                    <li>Designed a Vision-Language Model pipeline for automated trading signal confirmation —
+                      processing multi-timeframe TradingView chart screenshots through GPT-4 Vision and Claude
+                      Vision for trend detection and candlestick pattern recognition.</li>
+                    <li>Engineered a Reinforcement Learning (PPO) trading agent integrated with Neo4j GraphDB to
+                      extract market-state features and optimise action prediction and value estimation.</li>
+                    <li>Built a quantitative trading signals engine incorporating Fibonacci retracements, Elliott
+                      Wave theory, Ichimoku Cloud, and Wyckoff methodology.</li>
+                    <li>Containerised all ML services with Docker for consistent dev/production environments;
+                      managed collaborative Git workflows with structured branching and merge-review processes.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- University of Peshawar -->
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="glass-card timeline-card">
+                  <div class="timeline-meta">
+                    <div>
+                      <h4 class="timeline-role">AI Engineer</h4>
+                      <span class="timeline-company">University of Peshawar</span>
+                    </div>
+                    <span class="timeline-date">Nov 2023 – May 2024</span>
+                  </div>
+                  <ul class="timeline-bullets">
+                    <li>Deployed production-grade NLP inference services using FastAPI and Docker on
+                      GPU-accelerated Linux servers, supporting real-time model serving at scale.</li>
+                    <li>Fine-tuned a RoBERTa transformer for fake news classification, achieving a 95% F1-score
+                      through systematic architecture search and hyperparameter optimisation.</li>
+                    <li>Developed a GRU-augmented RoBERTa classifier for e-commerce fake review detection,
+                      combining contextual transformer encoders with recurrent temporal modelling.</li>
+                    <li>Conducted rigorous model evaluation experiments across multiple architectures, driving
+                      incremental accuracy improvements via feature engineering and ablation studies.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Education & Accomplishments Column -->
+          <div class="reveal-on-scroll delay-200">
+            <h3 class="timeline-column-title">
+              <i class="fa-solid fa-graduation-cap"></i> Education & Certifications
+            </h3>
+
+            <div class="timeline-track">
+              <!-- University of Peshawar -->
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="glass-card timeline-card">
+                  <div class="timeline-meta">
+                    <div>
+                      <h4 class="timeline-role">BS in Computer Science</h4>
+                      <span class="timeline-company">University of Peshawar</span>
+                    </div>
+                    <span class="timeline-date">Graduated May 2024</span>
+                  </div>
+                  <ul class="timeline-bullets">
+                    <li>Completed comprehensive coursework in Algorithms, Artificial Intelligence, Machine Learning,
+                      Distributed Systems, and Data Engineering.</li>
+                    <li>Final Year Project: Fake Review Detection System — a GRU-augmented RoBERTa classifier
+                      combining transformer contextual encoding with recurrent temporal modeling for e-commerce
+                      review authenticity detection.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Coursera Certifications -->
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="glass-card timeline-card">
+                  <div class="timeline-meta">
+                    <div>
+                      <h4 class="timeline-role">Certifications</h4>
+                      <span class="timeline-company">DeepLearning.AI / Coursera</span>
+                    </div>
+                    <span class="timeline-date">Certified</span>
+                  </div>
+                  <ul class="timeline-bullets">
+                    <li>Machine Learning Specialization — deeplearning.ai / Coursera. <a
+                        href="https://www.coursera.org/account/accomplishments/specialization/4CV5B8GVEA9W"
+                        target="_blank" rel="noopener noreferrer">Verify credential</a></li>
+                    <li>Deep Learning Specialization — deeplearning.ai / Coursera. <a
+                        href="https://www.coursera.org/account/accomplishments/specialization/MJR15SHBI9PI"
+                        target="_blank" rel="noopener noreferrer">Verify credential</a></li>
+                    <li>Data Visualization with Python — IBM / Coursera. <a
+                        href="https://www.coursera.org/account/accomplishments/verify/WYSDHUNAMMTN" target="_blank"
+                        rel="noopener noreferrer">Verify credential</a></li>
+                    <li>Data Analysis with Python — IBM / Coursera. <a
+                        href="https://www.coursera.org/account/accomplishments/verify/N5JZ39T544J6" target="_blank"
+                        rel="noopener noreferrer">Verify credential</a></li>
+                    <li>Feature Engineering — Coursera. <a
+                        href="https://www.coursera.org/account/accomplishments/verify/XFPOALGYACF9" target="_blank"
+                        rel="noopener noreferrer">Verify credential</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CV Download Section -->
+    <section class="section" id="cv-section">
+      <div class="container">
+        <div class="cv-banner-card reveal-on-scroll">
+          <div class="cv-banner-content">
+            <div class="section-tag" style="margin-bottom: 10px;"><i class="fa-solid fa-file-pdf"></i> Verified Resume
+            </div>
+            <h3>Looking for my full technical curriculum vitae?</h3>
+            <p>Download my resume covering professional experience, technical project
+              architectures, and publications.</p>
+          </div>
+          <div class="cv-banner-actions">
+            <a href="assets/cv.pdf" download="Ihsan_ullah_AI_Engineer_CV.pdf" class="btn btn-primary"
+              id="download-cv-btn">
+              <i class="fa-solid fa-download"></i> Download CV (PDF)
+            </a>
+            <a href="mailto:ihsaanullah642@gmail.com?subject=Job%20Opportunity%20-%20AI%20Engineer"
+              class="btn btn-secondary">
+              <i class="fa-solid fa-envelope"></i> Request Details
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <div class="section-tag"><i class="fa-solid fa-comments"></i> Get in Touch</div>
+          <h2 class="section-title">Let's Build Something <span class="gradient-text">Exceptional</span></h2>
+          <p class="section-subtitle">Interested in collaborating on AI development, knowledge retrieval systems,
+            intelligent automation, or full-time opportunities? Send a message.</p>
+        </div>
+
+        <div class="contact-grid">
+
+          <!-- Contact Info & Direct Links -->
+          <div class="glass-card contact-info-card reveal-on-scroll">
+
+            <div class="contact-direct-item">
+              <div class="contact-item-left">
+                <div class="contact-icon-box"><i class="fa-solid fa-envelope"></i></div>
+                <div>
+                  <div class="contact-item-label">Email Address</div>
+                  <a href="mailto:ihsaanullah642@gmail.com" class="contact-item-value">ihsaanullah642@gmail.com</a>
+                </div>
+              </div>
+              <button class="copy-btn" data-copy="ihsaanullah642@gmail.com" title="Copy Email">
+                <i class="fa-regular fa-copy"></i>
+              </button>
+            </div>
+
+            <div class="contact-direct-item">
+              <div class="contact-item-left">
+                <div class="contact-icon-box"><i class="fa-solid fa-phone"></i></div>
+                <div>
+                  <div class="contact-item-label">Phone / WhatsApp</div>
+                  <a href="tel:+923400552325" class="contact-item-value">+923400552325</a>
+                </div>
+              </div>
+              <button class="copy-btn" data-copy="+923400552325" title="Copy Phone">
+                <i class="fa-regular fa-copy"></i>
+              </button>
+            </div>
+
+            <div class="contact-direct-item">
+              <div class="contact-item-left">
+                <div class="contact-icon-box"><i class="fa-solid fa-map-location-dot"></i></div>
+                <div>
+                  <div class="contact-item-label">Location</div>
+                  <div class="contact-item-value">Bahria Town Phase 7, Islamabad (Remote Available)</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Social Links Strip -->
+            <div class="social-strip">
+              <a href="https://github.com/Ihsanullah-AI" target="_blank" rel="noopener noreferrer"
+                class="social-btn">
+                <i class="fa-brands fa-github"></i> GitHub
+              </a>
+              <a href="https://www.linkedin.com/in/im-ihsanullah/" target="_blank" rel="noopener noreferrer" class="social-btn">
+                <i class="fa-brands fa-linkedin"></i> LinkedIn
+              </a>
+            </div>
+
+          </div>
+
+          <!-- Interactive Contact Form -->
+          <div class="glass-card contact-form-card reveal-on-scroll delay-200">
+            <form id="contact-form">
+              <!-- Get your free access key at https://web3forms.com (just an email, no signup/password) and paste it below -->
+              <input type="hidden" name="access_key" value="5f3beaf7-b402-4154-bd09-af4338a3dadf">
+              <input type="hidden" name="from_name" value="Ihsan.AI Portfolio Contact Form">
+              <input type="text" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+
+              <div class="form-group">
+                <label for="name" class="form-label">Your Name</label>
+                <input type="text" id="name" name="name" class="form-input" placeholder="e.g. Alex Morgan" required>
+              </div>
+
+              <div class="form-group">
+                <label for="email" class="form-label">Your Email</label>
+                <input type="email" id="email" name="email" class="form-input" placeholder="alex@company.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="subject" class="form-label">Subject / Purpose</label>
+                <input type="text" id="subject" name="subject" class="form-input"
+                  placeholder="AI Engineer Role / Project Consultation" required>
+              </div>
+
+              <div class="form-group">
+                <label for="message" class="form-label">Message</label>
+                <textarea id="message" name="message" class="form-textarea"
+                  placeholder="Tell me about your project scope, requirements, or role details..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%;">
+                <i class="fa-solid fa-paper-plane"></i> Send Message
+              </button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-copy">
+        &copy; <span id="current-year">2026</span> <strong>Ihsan Ullah</strong>. Engineered with modern Vanilla Web
+        Technologies.
+      </div>
+      <a href="#hero" class="back-to-top">
+        <i class="fa-solid fa-arrow-up"></i> Back to Top
+      </a>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- Scripts -->
+  <script src="js/projects.js"></script>
+  <script src="js/particles.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
