@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollSpy();
   initCopyButtons();
   initContactForm();
+  initRequestDetailsButton();
   initYear();
 });
 
@@ -324,6 +325,29 @@ function showToast(message, icon = 'info') {
 /**
  * 9. Footer Current Year
  */
+/**
+ * 8. Request Details Button — scrolls to contact form and pre-fills it
+ */
+function initRequestDetailsButton() {
+  const btn = document.getElementById('request-details-btn');
+  const form = document.getElementById('contact-form');
+  if (!btn || !form) return;
+
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    if (form.subject && !form.subject.value.trim()) {
+      form.subject.value = 'Request for Detailed CV / Resume';
+    }
+    if (form.message && !form.message.value.trim()) {
+      form.message.value = "Hi Ihsan, I'd like more details about your experience and CV for a potential opportunity. Could you share more information?";
+    }
+
+    form.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    setTimeout(() => form.name.focus(), 500);
+  });
+}
+
 function initYear() {
   const yearEl = document.getElementById('current-year');
   if (yearEl) {
