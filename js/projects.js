@@ -77,8 +77,8 @@ const projectsData = [
     ],
     techStack: ["FastAPI", "LangGraph", "LangChain", "Groq API", "Pydantic v2", "SQLAlchemy", "PyMuPDF"],
     image: "assets/images/recruitment.jpg",
-    githubUrl: "https://github.com/Ihsanullah-AI/AI_Recruitment_Screening_Automation_System",
-    liveUrl: "https://github.com/Ihsanullah-AI/AI_Recruitment_Screening_Automation_System"
+    githubUrl: "https://github.com/IhsanUllah-AI/AI_Recruitment_Screening_Automation_System-",
+    liveUrl: "https://github.com/IhsanUllah-AI/AI_Recruitment_Screening_Automation_System-"
   },
   {
     id: "trading-bot",
@@ -131,8 +131,8 @@ const projectsData = [
     ],
     techStack: ["Python", "Ollama", "LangChain", "ChromaDB", "Hugging Face", "FastAPI"],
     image: "assets/images/local-doc-pipeline.svg",
-    githubUrl: "https://github.com/Ihsanullah-AI/Local_AI_Document_Pipeline",
-    liveUrl: "https://github.com/Ihsanullah-AI/Local_AI_Document_Pipeline"
+    githubUrl: "https://github.com/IhsanUllah-AI/Local_AI_Document_Pipeline-",
+    liveUrl: "https://github.com/IhsanUllah-AI/Local_AI_Document_Pipeline-"
   },
   {
     id: "facial-recognition-attendance",
