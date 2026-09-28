@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bgGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1220"/>
+      <stop offset="55%" stop-color="#0c2b45"/>
+      <stop offset="100%" stop-color="#123a5e"/>
+    </linearGradient>
+    <linearGradient id="siloGradA" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#57a2d5" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#0c446b" stop-opacity="0.9"/>
+    </linearGradient>
+    <linearGradient id="siloGradB" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#8f6ff5" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#4a2f9e" stop-opacity="0.9"/>
+    </linearGradient>
+    <radialGradient id="glow2" cx="50%" cy="15%" r="70%">
+      <stop offset="0%" stop-color="#57a2d5" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#57a2d5" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#bgGrad2)"/>
+  <rect width="800" height="450" fill="url(#glow2)"/>
+
+  <!-- Grid texture -->
+  <g opacity="0.08" stroke="#57a2d5" stroke-width="1">
+    <line x1="0" y1="90" x2="800" y2="90"/>
+    <line x1="0" y1="180" x2="800" y2="180"/>
+    <line x1="0" y1="270" x2="800" y2="270"/>
+    <line x1="0" y1="360" x2="800" y2="360"/>
+  </g>
+
+  <!-- Tenant A silo: Acme -->
+  <g transform="translate(190,150)">
+    <ellipse cx="0" cy="0" rx="72" ry="18" fill="url(#siloGradA)" opacity="0.9"/>
+    <rect x="-72" y="0" width="144" height="110" fill="url(#siloGradA)" opacity="0.55"/>
+    <ellipse cx="0" cy="110" rx="72" ry="18" fill="url(#siloGradA)" opacity="0.9"/>
+    <ellipse cx="0" cy="0" rx="72" ry="18" fill="none" stroke="#8fd1ff" stroke-width="2" opacity="0.8"/>
+    <text x="0" y="60" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700" fill="#eaf4ff">acme_collection</text>
+  </g>
+
+  <!-- Tenant B silo: Globex -->
+  <g transform="translate(610,150)">
+    <ellipse cx="0" cy="0" rx="72" ry="18" fill="url(#siloGradB)" opacity="0.9"/>
+    <rect x="-72" y="0" width="144" height="110" fill="url(#siloGradB)" opacity="0.55"/>
+    <ellipse cx="0" cy="110" rx="72" ry="18" fill="url(#siloGradB)" opacity="0.9"/>
+    <ellipse cx="0" cy="0" rx="72" ry="18" fill="none" stroke="#c9b6ff" stroke-width="2" opacity="0.8"/>
+    <text x="0" y="60" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700" fill="#eaf4ff">globex_collection</text>
+  </g>
+
+  <!-- Isolation barrier between silos -->
+  <g transform="translate(400,150)" opacity="0.85">
+    <line x1="0" y1="-30" x2="0" y2="180" stroke="#ff6b81" stroke-width="2" stroke-dasharray="6 6"/>
+    <circle cx="0" cy="-46" r="18" fill="#0c1b2b" stroke="#ff6b81" stroke-width="2"/>
+    <path d="M -7 -46 L -2 -41 L 8 -52" stroke="#ff6b81" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" transform="translate(0,0) scale(0.9)"/>
+    <text x="0" y="-58" text-anchor="middle" font-family="Outfit, sans-serif" font-size="12" font-weight="600" fill="#ff8a99">isolated</text>
+  </g>
+
+  <!-- Connectors down to shared LLM -->
+  <path d="M 190 260 Q 190 330 400 340" fill="none" stroke="#57a2d5" stroke-width="3" opacity="0.65"/>
+  <path d="M 610 260 Q 610 330 400 340" fill="none" stroke="#8f6ff5" stroke-width="3" opacity="0.65"/>
+
+  <!-- Shared Groq LLM node -->
+  <g transform="translate(400,365)">
+    <rect x="-90" y="-24" width="180" height="48" rx="12" fill="#0c1b2b" stroke="#57a2d5" stroke-width="2"/>
+    <text x="0" y="6" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700" fill="#eaf4ff">ChatGroq LLM</text>
+  </g>
+
+  <text x="400" y="40" text-anchor="middle" font-family="Outfit, sans-serif" font-weight="700"
+        font-size="24" fill="#eaf4ff" letter-spacing="0.4">
+    Multi-Tenant RAG Backend
+  </text>
+  <text x="400" y="425" text-anchor="middle" font-family="JetBrains Mono, monospace" font-weight="500"
+        font-size="13" fill="#8fb8de" letter-spacing="1">
+    FASTAPI · LANGCHAIN · CHROMADB · TENANT ISOLATION
+  </text>
+</svg>

@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bgGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1220"/>
+      <stop offset="55%" stop-color="#0c2b45"/>
+      <stop offset="100%" stop-color="#123a5e"/>
+    </linearGradient>
+    <radialGradient id="glow3" cx="50%" cy="20%" r="70%">
+      <stop offset="0%" stop-color="#57a2d5" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#57a2d5" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="nodeGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#8fd1ff"/>
+      <stop offset="100%" stop-color="#57a2d5"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#bgGrad3)"/>
+  <rect width="800" height="450" fill="url(#glow3)"/>
+
+  <!-- Graph edges -->
+  <g stroke="#57a2d5" stroke-width="1.5" opacity="0.55">
+    <line x1="400" y1="200" x2="230" y2="130"/>
+    <line x1="400" y1="200" x2="290" y2="290"/>
+    <line x1="400" y1="200" x2="510" y2="120"/>
+    <line x1="400" y1="200" x2="570" y2="270"/>
+    <line x1="400" y1="200" x2="400" y2="320"/>
+    <line x1="230" y1="130" x2="150" y2="220"/>
+    <line x1="510" y1="120" x2="620" y2="180"/>
+    <line x1="290" y1="290" x2="220" y2="340"/>
+    <line x1="570" y1="270" x2="640" y2="330"/>
+    <line x1="400" y1="320" x2="330" y2="370"/>
+    <line x1="400" y1="320" x2="470" y2="370"/>
+  </g>
+
+  <!-- Graph nodes -->
+  <g>
+    <circle cx="400" cy="200" r="20" fill="url(#nodeGlow)"/>
+    <circle cx="230" cy="130" r="11" fill="#8f6ff5"/>
+    <circle cx="290" cy="290" r="11" fill="#8f6ff5"/>
+    <circle cx="510" cy="120" r="11" fill="#8f6ff5"/>
+    <circle cx="570" cy="270" r="11" fill="#8f6ff5"/>
+    <circle cx="400" cy="320" r="13" fill="#57a2d5"/>
+    <circle cx="150" cy="220" r="8" fill="#3d4f68"/>
+    <circle cx="620" cy="180" r="8" fill="#3d4f68"/>
+    <circle cx="220" cy="340" r="8" fill="#3d4f68"/>
+    <circle cx="640" cy="330" r="8" fill="#3d4f68"/>
+    <circle cx="330" cy="370" r="8" fill="#3d4f68"/>
+    <circle cx="470" cy="370" r="8" fill="#3d4f68"/>
+  </g>
+
+  <!-- Crypto glyph in center node -->
+  <text x="400" y="207" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="18" font-weight="700" fill="#04121f">₿</text>
+
+  <text x="400" y="60" text-anchor="middle" font-family="Outfit, sans-serif" font-weight="700"
+        font-size="24" fill="#eaf4ff" letter-spacing="0.4">
+    Neo4j Knowledge Graph Chatbot
+  </text>
+  <text x="400" y="420" text-anchor="middle" font-family="JetBrains Mono, monospace" font-weight="500"
+        font-size="13" fill="#8fb8de" letter-spacing="1">
+    NEO4J · CYPHER · WHALE FLOWS · LANGCHAIN
+  </text>
+</svg>

@@ -1,0 +1,117 @@
+/**
+ * Keyframe Animations & Micro-Interactions
+ * Exact Calcite.live System
+ */
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(12, 68, 107, 0.4), inset 0 0 10px rgba(87, 162, 213, 0.2);
+    border-color: rgba(87, 162, 213, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(87, 162, 213, 0.5), inset 0 0 15px rgba(12, 68, 107, 0.3);
+    border-color: rgba(87, 162, 213, 0.8);
+  }
+}
+
+@keyframes radarPing {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.9;
+  }
+  50% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes sweep {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 120%;
+  }
+}
+
+/* Scroll reveal utility classes */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+.delay-400 { transition-delay: 400ms; }
+.delay-500 { transition-delay: 500ms; }
+
+/* Calcite Ambient Spotlights */
+.ambient-glow-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.5;
+}
+
+.orb-primary {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(12, 68, 107, 0.35) 0%, rgba(87, 162, 213, 0.08) 50%, transparent 75%);
+  top: 2%;
+  right: -5%;
+}
+
+.orb-secondary {
+  width: 550px;
+  height: 550px;
+  background: radial-gradient(circle, rgba(12, 68, 107, 0.25) 0%, rgba(87, 162, 213, 0.05) 60%, transparent 80%);
+  bottom: 12%;
+  left: -10%;
+}
+
+.orb-tertiary {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(87, 162, 213, 0.12) 0%, transparent 70%);
+  top: 45%;
+  right: 15%;
+}
+
+/* Calcite Multi-layer Card Border Effect */
+.glass-card {
+  background-image: linear-gradient(#161e2d 0%, #0e1520 60%, #0a0f18 100%), linear-gradient(rgba(87, 162, 213, 0.28), rgba(12, 68, 107, 0.2));
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  border: 1px solid transparent;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+  transition: all 0.25s ease-out;
+}
+
+.glass-card:hover {
+  background-image: linear-gradient(#1a2436 0%, #111a26 60%, #0c121e 100%), linear-gradient(rgba(87, 162, 213, 0.6), rgba(12, 68, 107, 0.35));
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.75), 0 0 25px rgba(12, 68, 107, 0.4);
+}
